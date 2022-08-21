@@ -10,20 +10,20 @@ const { apiKeys } = require("./routes/apiKey");
 
 let lastLatest = "2022-01-01T00:00:00Z";
 
-//Inital Video Fetch
-// (async () => {
-//   try {
-//     const [res, err] = await fetchVideos(lastLatest);
-//     if (res) {
-//       bulkInsert(res);
-//       lastLatest = res.items[0].snippet.publishedAt;
-//     } else if (err) {
-//       console.error(err);
-//     }
-//   } catch (err) {
-//     console.trace(err);
-//   }
-// })();
+// Inital Video Fetch
+(async () => {
+  try {
+    const [res, err] = await fetchVideos(lastLatest);
+    if (res) {
+      bulkInsert(res);
+      lastLatest = res.items[0].snippet.publishedAt;
+    } else if (err) {
+      console.error(err);
+    }
+  } catch (err) {
+    console.trace(err);
+  }
+})();
 
 // Runs a fetch every minute
 // updates lastLatest video to
