@@ -1,0 +1,22 @@
+Stage 0
+    Setup base
+        Structure Base App
+        organize reqs
+        Dockerize stuff
+    Setup app
+        setup application
+            controllers
+            routes
+        setup store
+            ElasticSearch
+
+Stage 1
+    YT API:
+        fetch logic
+        -> cron calls */10s
+    ElasticSearch populate
+        index fetched data into ES
+
+Stage 2
+    Express App
+        controllers + routes for search
